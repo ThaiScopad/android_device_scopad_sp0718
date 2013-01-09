@@ -1,0 +1,89 @@
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Use the non-open-source parts, if they're present
+-include vendor/scopad/sp0718/BoardConfigVendor.mk
+
+BOARD_USES_GENERIC_AUDIO := true
+#BOARD_USES_AUDIO_LEGACY := true
+USE_CAMERA_STUB := true
+
+BOARD_NEEDS_MEMORYHEAPPMEM := true
+BOARD_HAVE_BLUETOOTH := false
+BOARD_HAVE_FM_RADIO := false
+BOARD_HAVE_NFC := false
+BOARD_HAS_NO_SELECT_BUTTON := false
+
+TARGET_NO_BOOTLOADER := true
+
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_SMP := true
+TARGET_ARCH_VARIANT := armv7-a-neon
+ARCH_ARM_HAVE_VFP := true
+TARGET_ARCH_VARIANT_CPU := cortex-a9
+TARGET_ARCH_VARIANT_FPU := neon
+ARCH_ARM_HAVE_NEON := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_ARMV7A := true
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a9 -mfpu=neon -mfloat-abi=softfp
+
+BOARD_KERNEL_BASE := 0x60400000
+BOARD_KERNEL_CMDLINE := 
+BOARD_PAGE_SIZE := 16384
+
+TARGET_NO_RADIOIMAGE := true
+TARGET_BOARD_PLATFORM := rk30sdk
+TARGET_BOOTLOADER_BOARD_NAME := rk30board
+
+BOARD_EGL_CFG := device/scopad/sp0718/egl.cfg
+USE_OPENGL_RENDERER := true
+ENABLE_WEBGL := true
+BOARD_USE_SKIA_LCDTEXT := true
+
+#BOARD_WLAN_DEVICE := rtl8192cu
+BOARD_WLAN_DEVICE := wlan0
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+BOARD_WPA_SUPPLICANT_DRIVER := WEXT
+BOARD_HOSTAPD_DRIVER        := WEXT
+#BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_rtl
+WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/wlan.ko"
+WIFI_DRIVER_FW_PATH_PARAM   := ""
+WIFI_DRIVER_FW_PATH_STA     := ""
+WIFI_DRIVER_FW_PATH_AP      := ""
+WIFI_DRIVER_FW_PATH_P2P     := ""
+WIFI_DRIVER_MODULE_NAME     := "wlan"
+WIFI_DRIVER_MODULE_ARG      := ""
+
+BOARD_HAS_LARGE_FILESYSTEM := true
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 515899392
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 1073741824
+DEVICE_RESOLUTION := 1024x600
+
+TARGET_PROVIDES_INIT_RC := true
+
+TARGET_PREBUILT_KERNEL := device/scopad/sp0718/kernel
+BOARD_CUSTOM_GRAPHICS := ../../../device/scopad/sp0718/graphics.c
+
+TARGET_BOOTANIMATION_PRELOAD := true
+
+BOARD_HAVE_BLUETOOTH := false
+
+#TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/scopad/sp0718/releasetools/sp0718_ota_from_target_files
+
+
+# recovery
+TARGET_RECOVERY_INITRC := device/scopad/sp0718/recovery.init.rc
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/scopad/sp0718/recovery_keys.c
+BOARD_UMS_LUNFILE := "/sys/devices/platform/usb20_otg/gadget/lun0/file"
+BOARD_NO_RGBX_8888 := true
+BOARD_UMS_2ND_LUNFILE := "/sys/devices/platform/usb20_otg/gadget/lun1/file"
+BOARD_HAS_NO_SELECT_BUTTON := true
+TARGET_RECOVERY_PRE_COMMAND := "busybox dd if=/misc.img of=/dev/block/mtd/by-name/misc; sync"
+
+
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/scopad/sp0718/releasetools/sp0718_ota_from_target_files
