@@ -1,4 +1,4 @@
-android_device_yuandao_n70
+android_device_scopad_sp0718
 ===========================
 
-Yuandao N70 specific files
+Scopad SP0718 Specific Files
