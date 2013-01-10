@@ -20,42 +20,25 @@
 <!-- These resources are around just to allow their values to be customized
      for different hardware and product builds. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  
-    <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <bool name="config_allowAllRotations">true</bool>
+	<add-resource type="bool" name="config_unplugTurnsOnScreen">true</add-resource>
+	<add-resource type="bool" name="config_allowAllRotations">true</add-resource>
+	<add-resource type="bool" name="config_batterySdCardAccessibility">true</add-resource>
+	<add-resource type="bool" name="config_enableLockScreenRotation">true</add-resource>
+	<add-resource type="string" name="config_networkLocationProviderPackageName">com.google.android.location</add-resource>
+	<add-resource type="string" name="config_geocodeProviderPackageName">com.google.android.location</add-resource>
+	<add-resource type="bool" name="config_automatic_brightness_available">false</add-resource>
+	<add-resource type="bool" name="config_voice_capable">false</add-resource>
+	<add-resource type="bool" name="config_sms_capable">true</add-resource>
+	<add-resource type="bool" name="config_screenOffAnimation">false</add-resource>
+	<add-resource type="bool" name="config_showNavigationBar">true</add-resource>
+	<add-resource type="bool" name="config_wifi_dual_band_support">false</add-resource>
+	<add-resource type="bool" name="config_wifi_background_scan_support">true</add-resource>
+	<add-resource type="bool" name="config_wifi_p2p_support">false</add-resource>
+	<add-resource type="integer" name="config_screenBrightnessDim">30</add-resource>
+	<add-resource type="integer" name="db_connection_pool_size">3</add-resource>
+	<add-resource type="integer" name="config_cursorWindowSize">2048</add-resource>
+	<add-resource type="integer" name="config_lowBatteryCloseWarningLevel">15</add-resource>
+	<add-resource type="integer" name="config_lowBatteryWarningLevel">10</add-resource>
 
-    <bool name="config_batterySdCardAccessibility">true</bool>
-
-    <bool name="config_enableLockScreenRotation">true</bool>
-
-    <string name="config_networkLocationProviderPackageName">com.google.android.location</string>
-
-    <string name="config_geocodeProviderPackageName">com.google.android.location</string>
-
-    <bool name="config_automatic_brightness_available">false</bool>
-
-    <bool name="config_voice_capable">false</bool>
-
-    <bool name="config_sms_capable">true</bool>
-    
-    <bool name="config_screenOffAnimation">false</bool>    
-    
-    <bool name="config_showNavigationBar">true</bool>
-   
-    <bool translatable="false" name="config_wifi_dual_band_support">false</bool>
-    
-    <bool translatable="false" name="config_wifi_background_scan_support">true</bool>
-    
-    <bool translatable="false" name="config_wifi_p2p_support">false</bool>
-    
-    <integer name="config_screenBrightnessDim">30</integer>
-    
-    <integer name="db_connection_pool_size">3</integer>
-    
-    <integer name="config_cursorWindowSize">2048</integer>
-    
-    <integer name="config_lowBatteryCloseWarningLevel">15</integer>
-    
-    <integer name="config_lowBatteryWarningLevel">10</integer>
 </resources>

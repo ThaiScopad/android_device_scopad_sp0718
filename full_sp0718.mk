@@ -78,11 +78,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+
 PRODUCT_COPY_FILES += \
     vendor/cm/proprietary/RomManager.apk:system/app/RomManager.apk \
     vendor/cm/proprietary/Term.apk:system/app/Term.apk \
     vendor/cm/proprietary/lib/armeabi/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4 \
     vendor/cm/prebuilt/common/bootanimation/600.zip:system/media/bootanimation.zip
+
     
 PRODUCT_PACKAGES := \
     HoloSpiralWallpaper \
